@@ -29,7 +29,7 @@ export const AwardsGallery: React.FC = () => {
   };
 
   return (
-    <section id="awards" className="py-24 relative overflow-hidden bg-black">
+    <section id="awards" className="py-10 relative overflow-hidden bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
@@ -46,7 +46,7 @@ export const AwardsGallery: React.FC = () => {
           <div className="flex items-center gap-3">
             <span className="text-xs font-mono tracking-widest text-zinc-400 uppercase">Honors</span>
             <span className="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 font-mono font-bold text-xs">
-              STAGE 04
+              
             </span>
           </div>
         </div>
@@ -95,10 +95,7 @@ export const AwardsGallery: React.FC = () => {
                 <span className="text-zinc-500 block text-[10px] uppercase">Title</span>
                 <span className="font-bold text-white">eSports Champion</span>
               </div>
-              <div className="p-3 rounded bg-zinc-950 border border-zinc-800 col-span-2 sm:col-span-1">
-                <span className="text-zinc-500 block text-[10px] uppercase">Recognition</span>
-                <span className="font-bold text-zinc-300">Permanent Roster</span>
-              </div>
+              
             </div>
           </motion.div>
 
@@ -134,17 +131,6 @@ export const AwardsGallery: React.FC = () => {
               <p className="text-zinc-400 text-xs sm:text-sm font-mono leading-relaxed mb-6">
                 Honoring the grand finalist who battled through 100 contenders to the ultimate deciding match.
               </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-3 pt-4 border-t border-zinc-800 font-mono text-xs">
-              <div className="p-3 rounded bg-zinc-950 border border-zinc-800">
-                <span className="text-zinc-500 block text-[10px] uppercase">Trophy</span>
-                <span className="font-bold text-white">Silver Cup</span>
-              </div>
-              <div className="p-3 rounded bg-zinc-950 border border-zinc-800">
-                <span className="text-zinc-500 block text-[10px] uppercase">Title</span>
-                <span className="font-bold text-zinc-300">Vice-Champion</span>
-              </div>
             </div>
           </motion.div>
 
@@ -184,12 +170,6 @@ export const AwardsGallery: React.FC = () => {
                 </p>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-zinc-800 flex items-center justify-between text-[11px] font-mono text-zinc-500">
-                <span className="flex items-center gap-1">
-                  <Star className="w-3 h-3 text-zinc-400" />
-                  <span>Category Trophy</span>
-                </span>
-              </div>
             </motion.div>
           ))}
         </div>

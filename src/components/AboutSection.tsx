@@ -16,7 +16,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenRegister }) =>
   };
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-black">
+    <section id="about" className="py-8 relative overflow-hidden bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
@@ -33,7 +33,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenRegister }) =>
           <div className="flex items-center gap-3">
             <span className="text-xs font-mono tracking-widest text-zinc-400 uppercase">Inter-College Showdown</span>
             <span className="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 font-mono font-bold text-xs">
-              STAGE 01
+              
             </span>
           </div>
         </div>
@@ -114,11 +114,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenRegister }) =>
                   <p className="text-xs text-zinc-400 leading-relaxed">
                     {feature.description}
                   </p>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-[11px] text-zinc-400 font-mono">
-                  <span>Explore Spec</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </motion.div>
             );

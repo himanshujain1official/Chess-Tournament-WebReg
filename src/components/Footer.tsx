@@ -60,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister, onOpenAdmin }) =
           </div>
 
           <div className="mt-8 pt-6 border-t border-zinc-800 font-mono text-xs text-zinc-400 font-bold uppercase tracking-widest flex items-center justify-center gap-2">
-            <span>STAGE 10: CONQUER</span>
+            <span>CONQUER</span>
           </div>
         </motion.div>
 
@@ -105,17 +105,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister, onOpenAdmin }) =
 
           {/* Event Venue & Contact */}
           <div>
-            <h4 className="font-bold text-white text-xs uppercase tracking-wider mb-3">
-              Tournament Details
+            <h4 className="font-bold text-white text-xs uppercase tracking-wider mb-2">
+              Tournament Details 
             </h4>
+            <h6 className="font text-white text-xs mb-3">Click to view location ⇩</h6>
             <ul className="space-y-2 text-xs text-zinc-400">
               <li className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-zinc-400 shrink-0 mt-0.5" />
-                <span>BCS Govt. PG College, Dhamtari</span>
+                <a href="https://maps.app.goo.gl/WoYLXXEait9mD8AC9?g_st=ac" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  BCS Govt. PG College, Dhamtari
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
-                <span>https://bcspgcdmt.com/#/home</span>
+                <a href="https://bcspgcdmt.com/#/home" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  https://bcspgcdmt.com
+                </a>
               </li>
             </ul>
           </div>

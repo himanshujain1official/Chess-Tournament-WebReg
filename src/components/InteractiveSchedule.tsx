@@ -35,10 +35,10 @@ export const InteractiveSchedule: React.FC = () => {
   };
 
   return (
-    <section id="schedule" className="py-24 relative overflow-hidden bg-black">
+    <section id="schedule" className="py-8 relative overflow-hidden bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
+        {/* Section Header comment out
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12 pb-4 border-b border-zinc-800">
           <div>
             <div className="text-zinc-400 text-xs font-mono uppercase tracking-widest mb-1">
@@ -52,15 +52,15 @@ export const InteractiveSchedule: React.FC = () => {
           <div className="flex items-center gap-3">
             <span className="text-xs font-mono tracking-widest text-zinc-400 uppercase">Interactive Timeline</span>
             <span className="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 font-mono font-bold text-xs">
-              STAGE 03
+              
             </span>
           </div>
         </div>
 
-        {/* Top Control Bar: Day Tabs, Search & Filters */}
+        {/* Top Control Bar: Day Tabs, Search & Filters 
         <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-6 mb-8">
           
-          {/* Main Day 1 vs Day 2 Switcher */}
+          {/* Main Day 1 vs Day 2 Switcher 
           <div className="flex items-center p-1 rounded-lg bg-zinc-900 border border-zinc-800 w-full sm:w-auto">
             <button
               id="schedule-day1-tab"
@@ -101,9 +101,9 @@ export const InteractiveSchedule: React.FC = () => {
             </button>
           </div>
 
-          {/* Search & Category Filter */}
+          {/* Search & Category Filter 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            {/* Search Input */}
+            {/* Search Input 
             <div className="relative">
               <Search className="w-3.5 h-3.5 text-zinc-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
@@ -116,7 +116,7 @@ export const InteractiveSchedule: React.FC = () => {
               />
             </div>
 
-            {/* Category Dropdown/Pills */}
+            {/* Category Dropdown/Pills 
             <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
               {['all', 'match', 'ceremony', 'break', 'special'].map((cat) => (
                 <button
@@ -135,7 +135,7 @@ export const InteractiveSchedule: React.FC = () => {
           </div>
         </div>
 
-        {/* Day Summary Indicator */}
+        {/* Day Summary Indicator 
         <div className="mb-6 p-4 rounded-lg bw-panel-deep flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono">
           <div className="flex items-center gap-2 text-zinc-300">
             <span className="w-2 h-2 rounded-full bg-white" />
@@ -148,7 +148,7 @@ export const InteractiveSchedule: React.FC = () => {
           </span>
         </div>
 
-        {/* Timeline Grid */}
+        {/* Timeline Grid 
         <AnimatePresence mode="wait">
           <motion.div
             key={`day-${activeDay}-${selectedCategory}-${searchQuery}`}
@@ -184,7 +184,7 @@ export const InteractiveSchedule: React.FC = () => {
                     transition={{ duration: 0.15, delay: index * 0.015 }}
                     className="p-4 rounded-lg bw-card bw-card-hover flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
                   >
-                    {/* Left: Time & Badge */}
+                    {/* Left: Time & Badge 
                     <div className="flex items-center gap-3 min-w-[200px]">
                       <div className="w-9 h-9 rounded bg-zinc-900 border border-zinc-800 flex items-center justify-center text-white shrink-0 font-mono text-xs">
                         <Clock className="w-4 h-4 text-zinc-400" />
@@ -200,7 +200,7 @@ export const InteractiveSchedule: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Center: Activity Name & Description */}
+                    {/* Center: Activity Name & Description 
                     <div className="flex-1">
                       <h4 className="font-bold text-sm text-white uppercase tracking-wider font-mono">
                         {item.activity}
@@ -212,7 +212,7 @@ export const InteractiveSchedule: React.FC = () => {
                       )}
                     </div>
 
-                    {/* Right: Quick Action */}
+                    {/* Right: Quick Action 
                     <div className="flex items-center gap-2 shrink-0 self-end md:self-center">
                       <button
                         onClick={() => toggleReminder(item.id)}
@@ -221,10 +221,7 @@ export const InteractiveSchedule: React.FC = () => {
                             ? 'bg-white text-black font-bold'
                             : 'bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700'
                         }`}
-                        title={isSaved ? 'Reminder set' : 'Save reminder'}
                       >
-                        {isSaved ? <Check className="w-3.5 h-3.5" /> : <Activity className="w-3.5 h-3.5" />}
-                        <span>{isSaved ? 'Saved' : 'Pin'}</span>
                       </button>
                     </div>
                   </motion.div>
@@ -233,7 +230,7 @@ export const InteractiveSchedule: React.FC = () => {
             )}
           </motion.div>
         </AnimatePresence>
-
+        */}
       </div>
     </section>
   );

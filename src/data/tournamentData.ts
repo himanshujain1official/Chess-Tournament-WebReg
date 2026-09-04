@@ -20,20 +20,12 @@ export const ABOUT_FEATURES = [
     badge: 'Stage 01'
   },
   {
-    id: 'esports_exp',
-    title: 'E-Sports Experience',
-    tagline: 'High-Tech Broadcast',
-    description: 'Live boards synced to arena screens, professional broadcast commentary, dynamic digital scoreboards & live analytics.',
-    icon: 'Tv',
-    badge: 'Stage 02'
-  },
-  {
     id: 'fun_engagement',
     title: 'Fun & Engagement',
     tagline: 'Interactive Show',
     description: 'Audience move prediction contests, speed tactical puzzles, crowd challenges, and live polls between matches.',
     icon: 'Sparkles',
-    badge: 'Stage 03'
+    badge: 'Stage 02'
   },
   {
     id: 'one_goal',
@@ -41,7 +33,7 @@ export const ABOUT_FEATURES = [
     tagline: 'Battle of Minds',
     description: 'Outplay your opponent. Calculate deeply under clock pressure and be the last one standing to lift the Grand Trophy.',
     icon: 'Trophy',
-    badge: 'Stage 04'
+    badge: 'Stage 03'
   }
 ];
 
@@ -244,26 +236,6 @@ export const AWARDS_LIST: AwardItem[] = [
     rewardHighlight: 'Silver Trophy + Elite Medal'
   },
   {
-    id: 'best_tactical',
-    title: 'BEST TACTICAL PLAYER',
-    subtitle: 'Master of brilliance',
-    description: 'Awarded to the competitor executing the most lethal tactics, pins, forks, and sacrifices.',
-    icon: 'Zap',
-    tier: 'specialty',
-    glowColor: 'cyan',
-    rewardHighlight: 'Tactical Brilliance Cup'
-  },
-  {
-    id: 'best_endgame',
-    title: 'BEST ENDGAME PLAYER',
-    subtitle: 'The finisher',
-    description: 'Honoring impeccable technique in converting king & pawn and piece endgames under clock duress.',
-    icon: 'Crosshair',
-    tier: 'specialty',
-    glowColor: 'violet',
-    rewardHighlight: 'Endgame Mastery Plaque'
-  },
-  {
     id: 'fastest_checkmate',
     title: 'FASTEST CHECKMATE',
     subtitle: 'Speed meets skill',
@@ -273,36 +245,6 @@ export const AWARDS_LIST: AwardItem[] = [
     glowColor: 'gold',
     rewardHighlight: 'Blitz Speed Trophy'
   },
-  {
-    id: 'best_move',
-    title: 'BEST MOVE OF THE TOURNAMENT',
-    subtitle: 'One move that amazed all',
-    description: 'Voted by arbiter committee and audience for the single most jaw-dropping, engine-stun move.',
-    icon: 'Sparkles',
-    tier: 'specialty',
-    glowColor: 'cyan',
-    rewardHighlight: 'Immortal Move Medallion'
-  },
-  {
-    id: 'best_beginner',
-    title: 'BEST BEGINNER',
-    subtitle: 'Rising star award',
-    description: 'Recognizing top performance and relentless fighting spirit from a breakthrough competitor.',
-    icon: 'TrendingUp',
-    tier: 'specialty',
-    glowColor: 'emerald',
-    rewardHighlight: 'Rising Star Award'
-  },
-  {
-    id: 'audience_favourite',
-    title: 'AUDIENCE FAVOURITE PLAYER',
-    subtitle: 'The crowd\'s champion',
-    description: 'Determined by live spectators and stream chat polls celebrating electric personality & style.',
-    icon: 'Heart',
-    tier: 'specialty',
-    glowColor: 'violet',
-    rewardHighlight: 'People\'s Choice Cup'
-  }
 ];
 
 export const RULES_LIST: RuleItem[] = [
@@ -321,13 +263,6 @@ export const RULES_LIST: RuleItem[] = [
     critical: false
   },
   {
-    id: 'no_electronics',
-    text: 'No use of mobile, smart watch or any electronic device.',
-    detail: 'Complete zero-tolerance anti-cheating policy. All phones and wearable electronics must be deposited in lockers before entering the arena.',
-    icon: 'SmartphoneOff',
-    critical: true
-  },
-  {
     id: 'arbiter_final',
     text: 'Decisions of the chief arbiter will be final.',
     detail: 'Chief Arbiter and certified arbiters have supreme jurisdiction on all disputes, clock corrections, and claim verdicts.',
@@ -344,30 +279,6 @@ export const RULES_LIST: RuleItem[] = [
 ];
 
 export const ESPORTS_HIGHLIGHTS = [
-  {
-    id: 'live_boards',
-    title: 'Live Boards',
-    subtitle: 'Digital Arena Projection',
-    description: 'Every decisive board is connected with digital sensors transmitting moves in real-time to giant stadium LED screens and stream overlay.',
-    icon: 'MonitorPlay',
-    accent: 'from-violet-500/20 to-purple-600/20'
-  },
-  {
-    id: 'live_commentary',
-    title: 'Live Commentary',
-    subtitle: 'Grandmaster & Caster Desk',
-    description: 'Expert commentators explain positional subtleties, calculate deep tactical combinations, and bring heart-pounding eSports energy to every move.',
-    icon: 'Mic',
-    accent: 'from-amber-500/20 to-yellow-600/20'
-  },
-  {
-    id: 'audience_engagement',
-    title: 'Audience Engagement',
-    subtitle: 'Polls & Tactical Prediction',
-    description: 'Live interactive mobile predictions, audience vote on the next move, speed puzzle showdowns during breaks, and crowd prize draws.',
-    icon: 'Users',
-    accent: 'from-cyan-500/20 to-blue-600/20'
-  },
   {
     id: 'esports_feel',
     title: 'Real eSports Feel',

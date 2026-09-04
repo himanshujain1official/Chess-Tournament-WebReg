@@ -42,7 +42,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
 
     setTimeout(() => {
       const pass: RegisteredPlayerPass = {
-        passId: `ESP-2026-CH-${Math.floor(1000 + Math.random() * 9000)}`,
+        passId: `2026-${Math.floor(10 + Math.random() * 90)}`,
         playerData: { ...formData },
         registeredAt: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
         assignedSeed: Math.floor(1 + Math.random() * 100),
@@ -172,13 +172,12 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[11px] uppercase font-semibold text-zinc-400 mb-1.5">
-                      Email Address *
+                      Email Address 
                     </label>
                     <div className="relative">
                       <Mail className="w-3.5 h-3.5 text-zinc-500 absolute left-3 top-1/2 -translate-y-1/2" />
                       <input
-                        type="email"
-                        required
+                        type="email"                        
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="player@domain.com"

@@ -41,7 +41,7 @@ export const RulesSection: React.FC = () => {
           <div className="flex items-center gap-3">
             <span className="text-xs font-mono tracking-widest text-zinc-400 uppercase">Fair Play</span>
             <span className="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 font-mono font-bold text-xs">
-              STAGE 06
+              
             </span>
           </div>
         </div>

@@ -54,6 +54,38 @@ export const AdminExportModal: React.FC<AdminExportModalProps> = ({ isOpen, onCl
   const [showWebhookGuide, setShowWebhookGuide] = useState(false);
 
   useEffect(() => {
+    const fetchRegistrations = async () => {
+      try {
+        // Yahan apna Google Apps Script ka URL dalein
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbymtgovijxiND891z53Ykfv_5vRcqTycPMJQMIU_chw0_lnmLzcIXMUyFPa0YghxXPkLw/exec'; 
+        const response = await fetch(scriptURL);
+        const data = await response.json();
+        
+        // Data ko aapke React table ke format me convert karna
+        const formattedData = data.map(item => ({
+          passId: item.passId,
+          playerData: {
+            fullName: item.name,
+            dob: item.dob,
+            collegeOrOrg: item.college,
+            email: item.email,
+            phone: item.phone
+          },
+          registeredAt: new Date(item.timestamp).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+        }));
+        
+        // Data ko state me save karna (Apne state setter function ka naam check kar lein, jaise setRegistrations)
+        setRegistrations(formattedData); 
+
+      } catch (error) {
+        console.error('Error fetching data from Google Sheets:', error);
+      }
+    };
+
+    fetchRegistrations();
+  }, []);
+
+  useEffect(() => {
     if (isOpen) {
       setRegistrations(getStoredRegistrations());
       setWebhookInput(getWebhookUrl());
