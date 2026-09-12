@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowUp, Mail, MapPin, ShieldCheck, ArrowRight } from 'lucide-react';
+import { ArrowUp, Mail, MapPin, ShieldCheck, ArrowRight, Globe } from 'lucide-react';
 import { KingIcon } from './ChessGraphics';
 
 interface FooterProps {
@@ -123,8 +123,30 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister, onOpenAdmin }) =
                 </a>
               </li>
             </ul>
+            <ul className="space-y-2 text-xs text-zinc-400 mt-1">
+            <li className="flex items-start gap-2 mt-2">
+                  <Globe className="w-3 h-4" />
+                  <a
+                    href="https://www.instagram.com/yuva_e_arena?stkn=MTY4cnp0ZTJsejBxZQ=="
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-400 text-xs hover:text-pink-600 transition-colors"
+                  >
+                    Follow Instagram
+                  </a> 
+                 <br>
+                 </br> 
+                  <a
+                    href="https://www.facebook.com/share/19WevM45et/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-400 text-xs hover:text-blue-600 transition-colors"
+                  >
+                    Follow Facebook
+                  </a>
+                </li>
+              </ul>
           </div>
-
         </div>
 
         {/* Bottom copyright bar */}
