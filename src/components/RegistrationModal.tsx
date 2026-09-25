@@ -196,6 +196,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
                         type="tel"
                         required
                         value={formData.phone}
+                        maxlength={10}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+91 706 781 4389"
                         className="w-full pl-9 pr-3 py-2 rounded bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-500"
@@ -303,8 +304,8 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
                 </div>
 
                 <div className="pt-2 border-t border-zinc-800 flex items-center justify-between text-[10px] text-zinc-500">
-                  <span>Day 1 Check-in: 09:00 AM</span>
-                  <span className="text-zinc-300">Valid ID Required</span>
+                  <span>5 - 6 October</span>
+                  
                 </div>
               </div>
 

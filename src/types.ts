@@ -41,7 +41,7 @@ export interface RegistrationFormData {
   fullName: string;
   dob: string;
   email: string;
-  phone: string;
+  phone: number;
   collegeOrOrg: string;
   agreeToRules: boolean;
 }
