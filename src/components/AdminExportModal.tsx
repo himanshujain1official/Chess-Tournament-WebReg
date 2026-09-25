@@ -66,10 +66,9 @@ export const AdminExportModal: React.FC<AdminExportModalProps> = ({ isOpen, onCl
           passId: item.passId,
           playerData: {
             fullName: item.name,
-            dob: item.dob,
-            collegeOrOrg: item.college,
             email: item.email,
-            phone: item.phone
+            phone: item.phone,
+            lichessUsername: item.lichessUsername
           },
           registeredAt: new Date(item.timestamp).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
         }));
@@ -155,7 +154,7 @@ export const AdminExportModal: React.FC<AdminExportModalProps> = ({ isOpen, onCl
   const filteredRegistrations = registrations.filter(r => 
     r.playerData.fullName.toLowerCase().includes(searchQuery.toLowerCase()) ||
     r.playerData.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    r.playerData.collegeOrOrg.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    r.playerData.lichessUsername.toLowerCase().includes(searchQuery.toLowerCase()) ||
     r.passId.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -381,16 +380,16 @@ export const AdminExportModal: React.FC<AdminExportModalProps> = ({ isOpen, onCl
                   >
                     <div className="font-bold text-zinc-300">Quick 1-Minute Live Google Sheets Setup:</div>
                     <ol className="list-decimal list-inside space-y-1.5 text-zinc-400">
-                      <li>Open your Google Sheet, add headers in Row 1: <strong className="text-zinc-300">Timestamp, Pass ID, Full Name, DOB, Email, Phone, College/Org</strong>.</li>
-                      <li>Click <strong>Extensions &gt; Apps Script</strong> and paste:
-                        <div className="mt-1 p-2 rounded bg-black border border-zinc-800 text-[10px] text-zinc-300 select-all font-mono">
-                          {`function doPost(e) {
-  var s = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  var d = JSON.parse(e.postData.contents);
-  s.appendRow([new Date(), d.passId, d.fullName, d.dob, d.email, d.phone, d.collegeOrOrg]);
-  return ContentService.createTextOutput("OK");
-}`}
-                        </div>
+                                <li>Open your Google Sheet, add headers in Row 1: <strong className="text-zinc-300">Timestamp, Pass ID, Full Name, Email, Phone, Lichess Username</strong>.</li>
+                                <li>Click <strong>Extensions &gt; Apps Script</strong> and paste:
+                                  <div className="mt-1 p-2 rounded bg-black border border-zinc-800 text-[10px] text-zinc-300 select-all font-mono">
+                                    {`function doPost(e) {
+            var s = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+            var d = JSON.parse(e.postData.contents);
+            s.appendRow([new Date(), d.passId, d.fullName, d.email, d.phone, d.lichessUsername]);
+            return ContentService.createTextOutput("OK");
+          }`}
+                                  </div>
                       </li>
                       <li>Click <strong>Deploy &gt; New deployment &gt; Web app</strong>. Set <em>Execute as: Me</em> and <em>Who has access: Anyone</em>.</li>
                       <li>Click <strong>Deploy</strong>, copy the generated Web App URL, paste it in the box above, and click <strong>Save URL</strong>.</li>
@@ -408,7 +407,7 @@ export const AdminExportModal: React.FC<AdminExportModalProps> = ({ isOpen, onCl
                       type="text"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="Search by name, DOB, email, college, or Pass ID..."
+                      placeholder="Search by name, email, or Pass ID..."
                       className="w-full pl-9 pr-3 py-2 rounded bg-zinc-900 border border-zinc-800 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-500"
                     />
                   </div>
@@ -438,9 +437,9 @@ export const AdminExportModal: React.FC<AdminExportModalProps> = ({ isOpen, onCl
                       <tr className="bg-zinc-900 border-b border-zinc-800 text-zinc-400 text-[10px] uppercase font-bold tracking-wider">
                         <th className="p-3">Pass ID</th>
                         <th className="p-3">Full Name</th>
-                        <th className="p-3">DOB</th>
-                        <th className="p-3">College / Org</th>
+                        <th className="p-3">Email</th>
                         <th className="p-3">Contact</th>
+                        <th className="p-3">Lichess Username</th>
                         <th className="p-3">Registered</th>
                       </tr>
                     </thead>
@@ -460,15 +459,12 @@ export const AdminExportModal: React.FC<AdminExportModalProps> = ({ isOpen, onCl
                             <td className="p-3 text-zinc-200 font-semibold whitespace-nowrap">
                               {player.playerData.fullName}
                             </td>
-                            <td className="p-3 text-zinc-300 whitespace-nowrap">
-                              {player.playerData.dob || '—'}
-                            </td>
-                            <td className="p-3 text-zinc-400 whitespace-nowrap">
-                              {player.playerData.collegeOrOrg}
-                            </td>
                             <td className="p-3 text-zinc-400 text-[11px] whitespace-nowrap">
                               <div>{player.playerData.email}</div>
                               <div className="text-zinc-500 text-[10px]">{player.playerData.phone}</div>
+                            </td>
+                            <td className="p-3 text-zinc-300 whitespace-nowrap">
+                              {player.playerData.lichessUsername || '—'}
                             </td>
                             <td className="p-3 text-zinc-500 text-[11px] whitespace-nowrap">
                               {player.registeredAt}
