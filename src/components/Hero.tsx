@@ -27,7 +27,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-white animate-ping" />
             <span className="text-zinc-400 font-mono text-xs font-semibold tracking-widest uppercase">
-              INTER-COLLEGE INVITATIONAL • 2026
+              BCS GOVT. PG COLLEGE DHAMTARI • INVITATIONAL 2026
             </span>
           </div>
 
@@ -66,17 +66,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
             {/* Minimal Stat Cards in Black & White */}
             <div className="grid grid-cols-3 gap-3 mb-6">
               <div className="bw-card p-4 rounded-lg text-left">
-                <div className="text-2xl sm:text-3xl font-mono font-bold text-white">2 DAYS</div>
+                <div className="text-1xl sm:text-3xl font-mono font-bold text-white">5-6 Oct.</div>
                 <div className="text-[10px] font-mono uppercase text-zinc-400 font-medium tracking-wider">Tournament</div>
               </div>
 
               <div className="bw-card p-4 rounded-lg text-left">
-                <div className="text-2xl sm:text-3xl font-mono font-bold text-white">100</div>
+                <div className="text-1xl sm:text-3xl font-mono font-bold text-white">100</div>
                 <div className="text-[10px] font-mono uppercase text-zinc-400 font-medium tracking-wider">Players Max</div>
               </div>
 
               <div className="bw-card p-4 rounded-lg text-left">
-                <div className="text-2xl sm:text-3xl font-mono font-bold text-white">1</div>
+                <div className="text-1xl sm:text-3xl font-mono font-bold text-white">1</div>
                 <div className="text-[10px] font-mono uppercase text-zinc-400 font-medium tracking-wider">Grand Champion</div>
               </div>
             </div>
@@ -95,28 +95,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
                 <span>Register Now</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-
-              <a
-                href="#schedule"
-                id="hero-view-schedule-btn"
-                className="w-full sm:w-auto px-6 py-3.5 bw-btn-secondary font-mono font-semibold text-xs uppercase tracking-wider rounded-md flex items-center justify-center gap-2"
-              >
-                <Calendar className="w-4 h-4 text-zinc-400" />
-                <span>Explore Timeline</span>
-              </a>
             </div>
 
-            {/* Format Summary Mini Bar */}
-            <div className="bw-card p-4 rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono text-zinc-300">
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-zinc-400" />
-                <span>Time Control: <strong>10m + 5s Rapid</strong></span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-zinc-400" />
-                <span>Format: <strong>5 Swiss Rounds + Top 32 Knockouts</strong></span>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right Column: Event Specification Card */}
@@ -126,7 +106,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-5"
           >
-            <div className="bw-panel-deep p-6 sm:p-8 rounded-xl relative overflow-hidden">
+            <div className="bw-panel-deep p-5 sm:p-8 rounded-xl relative overflow-hidden">
               
               {/* Header */}
               <div className="text-center mb-6 pb-6 border-b border-zinc-800">
@@ -150,29 +130,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
                 </div>
 
                 <div className="flex items-center justify-between py-2 border-b border-zinc-800/80">
-                  <span className="text-zinc-400">Tournament Format</span>
-                  <span className="text-white font-bold">Swiss + Knockout</span>
-                </div>
-
-                <div className="flex items-center justify-between py-2 border-b border-zinc-800/80">
-                  <span className="text-zinc-400">Time Control</span>
-                  <span className="text-white font-bold">10m + 5s Rapid</span>
-                </div>
-
-                <div className="flex items-center justify-between py-2 border-b border-zinc-800/80">
                   <span className="text-zinc-400">Eligibility</span>
-                  <span className="text-white font-bold">Open to All Ratings</span>
+                  <span className="text-white font-bold">Open for All</span>
                 </div>
 
                 <div className="flex items-center justify-between py-2 border-b border-zinc-800/80">
                   <span className="text-zinc-400">Prizes & Honours</span>
-                  <span className="text-white font-bold">8 Official Awards</span>
+                  <span className="text-white font-bold"> Official Awards</span>
                 </div>
 
-                <div className="flex items-center justify-between py-2">
-                  <span className="text-zinc-400">Chief Arbiter</span>
-                  <span className="text-white font-bold">Certified Panel</span>
-                </div>
               </div>
 
             </div>

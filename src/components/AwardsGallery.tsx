@@ -82,10 +82,6 @@ export const AwardsGallery: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-zinc-300 text-sm font-mono mb-6 leading-relaxed">
-              Awarded to the tournament victor after surviving 5 Swiss rounds and every single knockout elimination match on the championship board.
-            </p>
-
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-zinc-800 font-mono text-xs">
               <div className="p-3 rounded bg-zinc-950 border border-zinc-800">
                 <span className="text-zinc-500 block text-[10px] uppercase">Trophy</span>

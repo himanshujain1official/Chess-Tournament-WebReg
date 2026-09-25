@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister, onOpenAdmin }) =
   };
 
   return (
-    <footer className="relative text-zinc-400 pt-20 pb-12 overflow-hidden border-t border-zinc-800 bg-black">
+    <footer className="relative text-zinc-400 pt-10 pb-12 overflow-hidden border-t border-zinc-800 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Grand CTA Banner */}
@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister, onOpenAdmin }) =
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
-          className="rounded-xl p-8 sm:p-12 bw-panel-deep text-center relative overflow-hidden mb-16"
+          className="rounded-xl p-6 sm:p-12 bw-panel-deep text-center relative overflow-hidden mb-16"
         >
           <div className="text-zinc-400 text-xs font-mono uppercase tracking-widest mb-3">
             Final Call for Competitors
@@ -51,12 +51,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister, onOpenAdmin }) =
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
 
-            <a
-              href="#schedule"
-              className="w-full sm:w-auto px-6 py-3 rounded-lg bw-btn-secondary font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2"
-            >
-              <span>View Timeline</span>
-            </a>
           </div>
 
           <div className="mt-8 pt-6 border-t border-zinc-800 font-mono text-xs text-zinc-400 font-bold uppercase tracking-widest flex items-center justify-center gap-2">
@@ -95,10 +89,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister, onOpenAdmin }) =
             </h4>
             <ul className="space-y-2 text-xs text-zinc-400">
               <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#overview" className="hover:text-white transition-colors">Progression</a></li>
-              <li><a href="#schedule" className="hover:text-white transition-colors">Schedule</a></li>
               <li><a href="#awards" className="hover:text-white transition-colors">Awards</a></li>
-              <li><a href="#arena" className="hover:text-white transition-colors">Arena</a></li>
               <li><a href="#rules" className="hover:text-white transition-colors">Rules</a></li>
             </ul>
           </div>
@@ -118,8 +109,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister, onOpenAdmin }) =
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
-                <a href="https://bcspgcdmt.com/#/home" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  https://bcspgcdmt.com
+                <a href="mailto:yuvaearena@gmail.com" className="hover:text-white transition-colors">
+                  yuvaearena@gmail.com
                 </a>
               </li>
             </ul>

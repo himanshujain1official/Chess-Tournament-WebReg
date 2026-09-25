@@ -243,7 +243,6 @@ export const AWARDS_LIST: AwardItem[] = [
     icon: 'Timer',
     tier: 'specialty',
     glowColor: 'gold',
-    rewardHighlight: 'Blitz Speed Trophy'
   },
 ];
 

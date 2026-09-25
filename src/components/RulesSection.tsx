@@ -106,7 +106,7 @@ export const RulesSection: React.FC = () => {
           <div className="lg:col-span-4 space-y-6">
             
             {/* Zero Tolerance Policy */}
-            <div className="p-6 rounded-xl bw-panel-deep font-mono">
+            <div className="p-3 rounded-xl bw-panel-deep font-mono">
               <div className="flex items-center gap-2 mb-3 text-white font-bold text-sm uppercase">
                 <AlertTriangle className="w-4 h-4 text-zinc-300" />
                 <span>Fair Play Enforcement</span>
@@ -114,33 +114,12 @@ export const RulesSection: React.FC = () => {
               <p className="text-xs text-zinc-400 leading-relaxed mb-4">
                 Anti-cheating protocols and metal screening will be strictly conducted prior to all match sessions. Unregistered communication devices are prohibited in the competition area.
               </p>
-              <div className="p-3 rounded bg-zinc-950 border border-zinc-800 text-[11px] text-zinc-400 space-y-1">
+              <div className="p-1 rounded bg-zinc-950 border border-zinc-800 text-[11px] text-zinc-400 space-y-1">
                 <div>• Designated equipment lockers on site</div>
                 <div>• standard arbiter review for disputes</div>
               </div>
             </div>
 
-            {/* Time Control Summary */}
-            <div className="p-6 rounded-xl bw-panel-deep font-mono">
-              <div className="flex items-center gap-2 text-white font-bold text-sm uppercase mb-3">
-                <Clock className="w-4 h-4 text-zinc-300" />
-                <span>Time Controls</span>
-              </div>
-              <div className="space-y-2 text-xs">
-                <div className="flex justify-between p-2.5 rounded bg-zinc-950 border border-zinc-800">
-                  <span className="text-zinc-400">Swiss & Knockout:</span>
-                  <span className="text-white font-bold">10 min + 5s</span>
-                </div>
-                <div className="flex justify-between p-2.5 rounded bg-zinc-950 border border-zinc-800">
-                  <span className="text-zinc-400">Blitz Tie-Break:</span>
-                  <span className="text-white font-bold">3 min + 2s</span>
-                </div>
-                <div className="flex justify-between p-2.5 rounded bg-zinc-950 border border-zinc-800">
-                  <span className="text-zinc-400">Armageddon:</span>
-                  <span className="text-white font-bold">5m (W) vs 4m (B)</span>
-                </div>
-              </div>
-            </div>
 
           </div>
 

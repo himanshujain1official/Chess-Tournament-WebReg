@@ -31,7 +31,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenRegister }) =>
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="text-xs font-mono tracking-widest text-zinc-400 uppercase">Inter-College Showdown</span>
+            <span className="text-xs font-mono tracking-widest text-zinc-400 uppercase">Chess Esport Showdown</span>
             <span className="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 font-mono font-bold text-xs">
               
             </span>
@@ -49,7 +49,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenRegister }) =>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8">
               <p className="text-lg sm:text-xl text-zinc-200 font-normal leading-relaxed mb-4">
-                <strong className="text-white font-bold">Chess eSports</strong> is an inter-college championship bringing together <span className="text-white font-bold">100 players</span> to compete, calculate under clock duress, and battle for the grand title.
+                <strong className="text-white font-bold">Chess eSports</strong> is an championship bringing together <span className="text-white font-bold">100 players</span> to compete, calculate under clock duress, and battle for the grand title.
               </p>
               <p className="text-sm sm:text-base text-zinc-400 font-mono flex items-center gap-2">
                 <Target className="w-4 h-4 text-white" />
@@ -64,7 +64,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenRegister }) =>
                 </div>
                 <div>
                   <div className="text-[10px] text-zinc-400 font-mono uppercase tracking-wider">Tournament Field</div>
-                  <div className="text-sm font-bold text-white font-mono">100 Collegiate Players</div>
+                  <div className="text-sm font-bold text-white font-mono">100 Players</div>
                 </div>
               </div>
 
