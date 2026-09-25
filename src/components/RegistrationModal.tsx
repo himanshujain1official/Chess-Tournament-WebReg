@@ -6,8 +6,6 @@ import {
   User, 
   Mail, 
   Phone, 
-  Building, 
-  Calendar,
   Copy, 
   Check, 
   ArrowRight
