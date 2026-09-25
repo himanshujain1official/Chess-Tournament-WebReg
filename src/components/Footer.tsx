@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowUp, Mail, MapPin, ShieldCheck, ArrowRight, Globe } from 'lucide-react';
+import { ArrowUp, Mail, MapPin, ShieldCheck, ArrowRight, Globe, Phone } from 'lucide-react';
 import { KingIcon } from './ChessGraphics';
 
 interface FooterProps {
@@ -53,9 +53,25 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister, onOpenAdmin }) =
 
           </div>
 
+          <div className="mt-6 text-xs text-zinc-400 font-mono uppercase tracking-widest">
+                          <a 
+                            href="https://chat.whatsapp.com/EqmpKkFm7mdB5P48uMyv41" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            icon={<Mail className="w-10 h-10" />}
+                            className="flex items-center justify-center gap-2 py-2.5 rounded bw-btn-secondary text-xs font-bold uppercase tracking-wider mb-3 animation-pulse transition-transform"
+                          >
+                            <Mail className="w-4 h-4 text-green-500" />   
+                            <span className="text-white-500 text-bold text-[11px] uppercase">Click to Join - YEA Chess Group</span>
+                          </a>
+                        </div>
+
           <div className="mt-8 pt-6 border-t border-zinc-800 font-mono text-xs text-zinc-400 font-bold uppercase tracking-widest flex items-center justify-center gap-2">
             <span>CONQUER</span>
           </div>
+
+           
+        
         </motion.div>
 
         {/* Footer Navigation & Brand columns */}

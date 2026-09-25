@@ -242,15 +242,31 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
             <div className="text-center font-mono">
               
               <div className="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center text-white mx-auto mb-3">
-                <CheckCircle2 className="w-6 h-6" />
+                <CheckCircle2 className="w-6 h-6 text-green-500 " />
               </div>
 
               <h3 className="text-xl font-display font-black text-white uppercase tracking-wide mb-1">
                 Registration Confirmed
               </h3>
-              <p className="text-xs text-zinc-400 mb-6">
+              <p className="text-xs text-zinc-400 mb-5">
                 Your entry has been recorded for the tournament.
               </p>
+                <p className="text-xs text-zinc-400 mb-3">
+                 It's Mandatory to Join the YEA Chess Group♟️
+                </p>
+               <div>
+                <a 
+                  href="https://chat.whatsapp.com/EqmpKkFm7mdB5P48uMyv41" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  icon={<mail className="w-10 h-10" />}
+                  className="flex items-center justify-center gap-2 py-2.5 rounded bw-btn-secondary text-xs font-bold uppercase tracking-wider mb-5 animation-pulse transition-transform"
+                >
+                  <Mail className="w-6 h-6 text-green-500" />   
+              
+                  <span className="text-white-500 text-bold text-[18px] uppercase">Click to Join - YEA Chess Group</span>
+                </a>
+              </div>
 
               {/* Digital Pass Ticket Card */}
               <div className="rounded-lg p-5 bg-zinc-900 border border-zinc-800 text-left mb-6 text-xs">
@@ -281,9 +297,9 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-zinc-800 flex items-center justify-between text-[10px] text-zinc-500">
+                <div className="pt-2 border-t border-zinc-800 flex items-center justify-between text-[11px] text-zinc-500">
                   <span>5 - 6 October</span>
-                  
+                  <span>Take a Screenshot of Confirmation</span>
                 </div>
               </div>
 
