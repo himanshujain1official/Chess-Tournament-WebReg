@@ -69,10 +69,9 @@ export async function dispatchToWebhook(pass: RegisteredPlayerPass): Promise<boo
       timestamp: new Date().toISOString(),
       passId: pass.passId,
       fullName: pass.playerData.fullName,
-      dob: pass.playerData.dob,
       email: pass.playerData.email,
       phone: pass.playerData.phone,
-      collegeOrOrg: pass.playerData.collegeOrOrg,
+      lichessUsername: pass.playerData.lichessUsername,
       registeredAt: pass.registeredAt,
       seed: pass.assignedSeed
     };
@@ -96,7 +95,7 @@ export async function dispatchToWebhook(pass: RegisteredPlayerPass): Promise<boo
  * Generates an Excel-compatible CSV file and triggers download directly in browser
  */
 export function exportToCSV(registrations: RegisteredPlayerPass[]): void {
-  const headers = ['Pass ID', 'Full Name', 'Date of Birth (DOB)', 'Email Address', 'Contact Phone', 'College / Institute', 'Registration Date', 'Seed Number'];
+  const headers = ['Pass ID', 'Full Name', 'Email Address', 'Contact Phone', 'Lichess Username', 'Registration Date', 'Seed Number'];
   
   const escapeCell = (val: string | number | undefined) => {
     if (val === undefined || val === null) return '""';
@@ -107,10 +106,9 @@ export function exportToCSV(registrations: RegisteredPlayerPass[]): void {
   const rows = registrations.map(r => [
     escapeCell(r.passId),
     escapeCell(r.playerData.fullName),
-    escapeCell(r.playerData.dob),
     escapeCell(r.playerData.email),
     escapeCell(r.playerData.phone),
-    escapeCell(r.playerData.collegeOrOrg),
+    escapeCell(r.playerData.lichessUsername),
     escapeCell(r.registeredAt),
     escapeCell(r.assignedSeed)
   ].join(','));
