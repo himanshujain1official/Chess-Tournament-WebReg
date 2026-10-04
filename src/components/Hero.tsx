@@ -89,10 +89,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
               <button
                 id="hero-register-btn"
-                onClick={onOpenRegister}
+               
                 className="w-full sm:w-auto px-8 py-3.5 bw-btn-primary font-mono font-bold text-xs uppercase tracking-wider rounded-md flex items-center justify-center gap-2 group"
               >
-                <span>Register Now</span>
+              
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>

@@ -47,7 +47,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister, onOpenAdmin }) =
               onClick={onOpenRegister}
               className="w-full sm:w-auto px-8 py-3 rounded-lg bw-btn-primary font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2"
             >
-              <span>Register Now</span>
+              
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
 
